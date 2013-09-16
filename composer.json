@@ -1,0 +1,25 @@
+{
+    "name": "squirrel/socketio-extension",
+    "authors": [
+        {
+            "name": "Rob Squires",
+            "email": "rob.squires@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {"": "src", "Tests": ""}
+    },
+    "require": {
+        "behat/mink-zombie-driver": "1.1.*@dev"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "2.0.*@dev",
+        "behat/behat": "2.5.*@dev",
+        "behat/mink": "1.5.*dev",
+        "behat/mink-extension": "1.2.*@dev",
+        "behat/mink-selenium2-driver": "1.1.*@dev"
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}
