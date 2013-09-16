@@ -1,5 +1,5 @@
 {
-    "name": "squirrel/socketio-extension",
+    "name": "squirrel/mink-socketio-driver",
     "authors": [
         {
             "name": "Rob Squires",

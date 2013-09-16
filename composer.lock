@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "c59ba3446f083586bc0d3ea564512641",
+    "hash": "2c6815c49248744be3ace7025db38738",
     "packages": [
         {
             "name": "behat/mink",
@@ -224,16 +224,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Behat.git",
-                "reference": "01fdb26879073785db5d38f310fb5f281a940e89"
+                "reference": "6219feccf5b5741ced2e7a16c47afbc14e10c27e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Behat/zipball/01fdb26879073785db5d38f310fb5f281a940e89",
-                "reference": "01fdb26879073785db5d38f310fb5f281a940e89",
+                "url": "https://api.github.com/repos/Behat/Behat/zipball/6219feccf5b5741ced2e7a16c47afbc14e10c27e",
+                "reference": "6219feccf5b5741ced2e7a16c47afbc14e10c27e",
                 "shasum": ""
             },
             "require": {
-                "behat/gherkin": "~2.2.9",
+                "behat/gherkin": "~2.3.0",
                 "php": ">=5.3.1",
                 "symfony/config": "~2.0",
                 "symfony/console": "~2.0",
@@ -255,11 +255,6 @@
                 "bin/behat"
             ],
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-develop": "2.5-dev"
-                }
-            },
             "autoload": {
                 "psr-0": {
                     "Behat\\Behat": "src/"
@@ -283,30 +278,30 @@
                 "Behat",
                 "Symfony2"
             ],
-            "time": "2013-08-18 18:57:56"
+            "time": "2013-09-16 15:40:15"
         },
         {
             "name": "behat/gherkin",
-            "version": "v2.2.9",
+            "version": "v2.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Gherkin.git",
-                "reference": "cca2c477921ca38578d6e9759ea5e450f29c2d8f"
+                "reference": "89d69cce9a41da303249f7c7f7f9ffbc8d6ee387"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Gherkin/zipball/cca2c477921ca38578d6e9759ea5e450f29c2d8f",
-                "reference": "cca2c477921ca38578d6e9759ea5e450f29c2d8f",
+                "url": "https://api.github.com/repos/Behat/Gherkin/zipball/89d69cce9a41da303249f7c7f7f9ffbc8d6ee387",
+                "reference": "89d69cce9a41da303249f7c7f7f9ffbc8d6ee387",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.1",
-                "symfony/finder": ">=2.0,<2.4-dev"
+                "symfony/finder": "~2.0"
             },
             "require-dev": {
-                "symfony/config": ">=2.0,<2.4-dev",
-                "symfony/translation": ">=2.0,<2.4-dev",
-                "symfony/yaml": ">=2.0,<2.4-dev"
+                "symfony/config": "~2.0",
+                "symfony/translation": "~2.0",
+                "symfony/yaml": "~2.0"
             },
             "suggest": {
                 "symfony/config": "If you want to use Config component to manage resources",
@@ -344,7 +339,7 @@
                 "Symfony2",
                 "parser"
             ],
-            "time": "2013-03-02 10:38:40"
+            "time": "2013-08-11 18:27:28"
         },
         {
             "name": "behat/mink-extension",
