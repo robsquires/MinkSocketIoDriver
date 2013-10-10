@@ -32,7 +32,7 @@ class Server extends NodeJSServer
         }
         return $result;
     }
-    
+
     protected function getServerScript()
     {
         $js = <<<'JS'
@@ -46,9 +46,9 @@ var connections = [];
 
 var debug = "";
 
-var newConnection = function(address, eventName) {
+var newConnection = function(address, query, eventName) {
   var connection  = {},
-      socket      = socketio.connect(address, {'force new connection':true});
+      socket      = socketio.connect(address, {'force new connection':true, 'query' : query});
 
   connection.connected = false;
   connection.socket = socket;
@@ -83,7 +83,7 @@ var emit = function(session, eventName, payload) {
 var subscribe = function(session, eventName) {
   var connection = getConnection(session);
   var socket = connection.socket;
-  
+
   if( connection.events[eventName] !== undefined) {
     return;
   }
@@ -98,7 +98,7 @@ var subscribe = function(session, eventName) {
 
 var peek = function(session, eventName) {
   var connection = getConnection(session);
-  
+
   return connection.events[eventName];
 }
 
@@ -110,7 +110,7 @@ net.createServer(function (stream) {
   stream.on('data', function (data) {
     buffer += data;
   });
-  
+
   stream.on('end', function () {
     eval(buffer);
   });

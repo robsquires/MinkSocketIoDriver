@@ -19,12 +19,16 @@ class Client
         $this->server = $server;
     }
 
-    public function connect($host, $timeout = null, $eventName = null)
-    {   
+    public function connect($host, $timeout = null, $eventName = null, $user = null)
+    {
+        $query = "";
+        if($user){
+            $query = "user=$user";
+        }
         if($eventName == null) {
-            $js = "newConnection('$host')";
+            $js = "newConnection('$host', '$query')";
         }else{
-            $js = "newConnection('$host', '$eventName')";
+            $js = "newConnection('$host', '$query', '$eventName')";
         }
         $this->session = $this->server->evalJs("$js");
 
@@ -39,7 +43,7 @@ class Client
         if($wait !== null ){
             $uwait = $wait * 1000000;
             usleep($uwait);
-            
+
         }
     }
 
