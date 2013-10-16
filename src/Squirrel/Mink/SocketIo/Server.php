@@ -48,7 +48,7 @@ var debug = "";
 
 var newConnection = function(address, query, eventName) {
   var connection  = {},
-      socket      = socketio.connect(address, {'force new connection':true, 'query' : query});
+      socket      = socketio.connect(address, {'query' : query});
 
   connection.connected = false;
   connection.socket = socket;
