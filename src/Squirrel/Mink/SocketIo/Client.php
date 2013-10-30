@@ -19,16 +19,12 @@ class Client
         $this->server = $server;
     }
 
-    public function connect($host, $timeout = null, $eventName = null, $user = null)
+    public function connect($host, $timeout = null, $eventName = null, $queryString = '')
     {
-        $query = "";
-        if($user){
-            $query = "user=$user";
-        }
         if($eventName == null) {
-            $js = "newConnection('$host', '$query')";
+            $js = "newConnection('$host', '$queryString')";
         }else{
-            $js = "newConnection('$host', '$query', '$eventName')";
+            $js = "newConnection('$host', '$queryString', '$eventName')";
         }
         $this->session = $this->server->evalJs("$js");
 
